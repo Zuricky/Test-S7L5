@@ -1,3 +1,5 @@
+const form = document.getElementById("product-form");
+
 const params = new URLSearchParams(window.location.search);
 const productId = params.get("appId");
 
@@ -9,7 +11,6 @@ console.log("PRODUCT ID:", productId);
 console.log("URL being used:", URL);
 
 window.addEventListener("DOMContentLoaded", () => {
-  const form = document.getElementById("product-form");
   const submitBtn = document.getElementById("submit-btn");
   const subtitle = document.querySelector("h2 + h5");
   const delBtn = document.getElementById("delete-btn");
