@@ -24,6 +24,7 @@ fetch("https://striveschool-api.herokuapp.com/api/product/" + productId, {
       <h6>${item.name}</h6>
       <p>${item.description}</p>
       <p>&#8364; ${item.price}</p>
+      <a href="./backoffice.html" class="btn btn-dark">Edit</a>
     `;
   })
   .catch((err) => console.log(err));
