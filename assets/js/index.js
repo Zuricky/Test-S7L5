@@ -13,12 +13,12 @@ fetch("https://striveschool-api.herokuapp.com/api/product/", {
       throw new Error("ERROR! Failed to retrieve data!");
     }
   })
-  .then((product) => {
-    console.log(product);
+  .then((products) => {
+    console.log(products);
 
     const productList = document.getElementById("productList");
 
-    product.forEach((item) => {
+    products.forEach((item) => {
       console.log(item);
 
       const div = document.createElement("div");
@@ -28,8 +28,8 @@ fetch("https://striveschool-api.herokuapp.com/api/product/", {
             <img src="${item.imageUrl}" class="card-img-top" alt="..." />
             <div class="card-body">
               <h5 class="card-title">${item.name}</h5>
-              <p class="card-text">&#8364 ${item.price}</p>
-              <a href="./details.html" class="btn btn-dark">Detail</a>
+              <p class="card-text">&#8364; ${item.price}</p>
+              <a href="./details.html?appId=${item._id}" class="btn btn-dark">Detail</a>
               <a href="#" class="btn btn-dark">Buy</a>
             </div>
           </div>
