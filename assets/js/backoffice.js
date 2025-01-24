@@ -2,8 +2,11 @@ const params = new URLSearchParams(window.location.search);
 const productId = params.get("appId");
 
 const URL = productId
-  ? "https://striveschool-api.herokuapp.com/api/agenda/" + productId
-  : "https://striveschool-api.herokuapp.com/api/agenda/";
+  ? "https://striveschool-api.herokuapp.com/api/product/" + productId
+  : "https://striveschool-api.herokuapp.com/api/product/";
+
+console.log("PRODUCT ID:", productId);
+console.log("URL being used:", URL);
 
 window.addEventListener("DOMContentLoaded", () => {
   const form = document.getElementById("product-form");

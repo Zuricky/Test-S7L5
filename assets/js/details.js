@@ -1,7 +1,7 @@
 const params = new URLSearchParams(window.location.search);
 const productId = params.get("appId");
 
-console.log("RESOURCE ID", productId);
+console.log("PRODUCT ID", productId);
 
 fetch("https://striveschool-api.herokuapp.com/api/product/" + productId, {
   headers: {
@@ -24,7 +24,7 @@ fetch("https://striveschool-api.herokuapp.com/api/product/" + productId, {
       <h6>${item.name}</h6>
       <p>${item.description}</p>
       <p>&#8364; ${item.price}</p>
-      <a href="./backoffice.html" class="btn btn-dark">Edit</a>
+      <a href="./backoffice.html?appId=${item._id}" class="btn btn-dark">Edit</a>
     `;
   })
   .catch((err) => console.log(err));
