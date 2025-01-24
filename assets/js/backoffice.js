@@ -23,7 +23,12 @@ window.addEventListener("DOMContentLoaded", () => {
     delBtn.classList.remove("d-none");
     delBtn.onclick = handleDelete;
 
-    fetch(URL)
+    fetch(URL, {
+      headers: {
+        Authorization:
+          "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NzkzNjI5Y2I3NDcwMTAwMTU4YjJiMzciLCJpYXQiOjE3Mzc3MTIyODQsImV4cCI6MTczODkyMTg4NH0.Qa4h_QJ6leyscheHpP8miF8JiP73g84x3k4PWuwZvnE",
+      },
+    })
       .then((resp) => {
         if (resp.ok) {
           return resp.json();
@@ -90,7 +95,13 @@ const handleDelete = () => {
   const hasConfirmed = confirm("Are you sure you want to delete the product?");
 
   if (hasConfirmed) {
-    fetch(URL, { method: "DELETE" })
+    fetch(URL, {
+      method: "DELETE",
+      headers: {
+        Authorization:
+          "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NzkzNjI5Y2I3NDcwMTAwMTU4YjJiMzciLCJpYXQiOjE3Mzc3MTIyODQsImV4cCI6MTczODkyMTg4NH0.Qa4h_QJ6leyscheHpP8miF8JiP73g84x3k4PWuwZvnE",
+      },
+    })
       .then((resp) => {
         if (resp.ok) {
           return resp.json();
