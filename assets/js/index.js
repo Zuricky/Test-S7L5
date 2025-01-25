@@ -22,7 +22,8 @@ fetch("https://striveschool-api.herokuapp.com/api/product/", {
       console.log(item);
 
       const div = document.createElement("div");
-      div.classList.add("col-4");
+      div.classList.add("col-md-4");
+      div.classList.add("col-sm-6");
       div.innerHTML = `
           <div class="card mt-5 bg-dark text-light">
             <img src="${item.imageUrl}" class="card-img-top" alt="..." />
