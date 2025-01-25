@@ -8,7 +8,6 @@ const URL = productId
   : "https://striveschool-api.herokuapp.com/api/product/";
 
 console.log("PRODUCT ID:", productId);
-console.log("URL being used:", URL);
 
 window.addEventListener("DOMContentLoaded", () => {
   const submitBtn = document.getElementById("submit-btn");
