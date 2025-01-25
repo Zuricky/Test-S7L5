@@ -23,7 +23,7 @@ fetch("https://striveschool-api.herokuapp.com/api/product/" + productId, {
       <img src="${item.imageUrl}" alt="Immagine Prodotto" />
       <h6>${item.name}</h6>
       <p>${item.description}</p>
-      <p>&#8364; ${item.price}</p>
+      <p>${item.price} &#8364;</p>
       <a href="./backoffice.html?appId=${item._id}" class="btn btn-dark">Edit</a>
     `;
   })
