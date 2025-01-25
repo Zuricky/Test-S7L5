@@ -24,13 +24,13 @@ fetch("https://striveschool-api.herokuapp.com/api/product/", {
       const div = document.createElement("div");
       div.classList.add("col-4");
       div.innerHTML = `
-          <div class="card mt-5">
+          <div class="card mt-5 bg-dark text-light">
             <img src="${item.imageUrl}" class="card-img-top" alt="..." />
             <div class="card-body">
               <h5 class="card-title">${item.name}</h5>
               <p class="card-text">${item.price} &#8364;</p>
-              <a href="#" class="btn btn-dark">Buy</a>
-              <a href="./details.html?appId=${item._id}" class="btn btn-dark">Detail</a>
+              <a href="#" class="btn btn-light">Buy</a>
+              <a href="./details.html?appId=${item._id}" class="btn btn-light">Detail</a>
             </div>
           </div>
         </div>
