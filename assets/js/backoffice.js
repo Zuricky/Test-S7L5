@@ -45,7 +45,7 @@ window.addEventListener("DOMContentLoaded", () => {
       });
   } else {
     submitBtn.innerText = "Add product";
-    submitBtn.classList.add("btn-dark");
+    submitBtn.classList.add("btn-success");
 
     subtitle.innerText = "— Create new product";
   }
